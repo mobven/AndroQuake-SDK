@@ -8,6 +8,12 @@
     android:layout_height="wrap_content"
     app:cornerRadius="8dp"
     app:icon="@drawable/button_ahbap"
+    app:iconGravity="textStart"
+    app:iconPadding="0dp"
+    android:insetLeft="0dp"
+    android:insetTop="0dp"
+    android:insetRight="0dp"
+    android:insetBottom="0dp"
     app:iconTint="@null"
     app:strokeColor="@color/color_green_ahbap"
     app:strokeWidth="2dp" />
