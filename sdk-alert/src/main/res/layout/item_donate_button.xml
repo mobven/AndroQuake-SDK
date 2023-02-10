@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.button.MaterialButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/button_donate"
+    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cornerRadius="8dp"
+    app:icon="@drawable/button_ahbap"
+    app:iconTint="@null"
+    app:strokeColor="@color/color_green_ahbap"
+    app:strokeWidth="2dp" />

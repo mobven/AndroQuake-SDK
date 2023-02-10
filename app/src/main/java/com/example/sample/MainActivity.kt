@@ -1,9 +1,11 @@
 package com.example.sample
 
+import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.sdk_alert.DepremAlert
+import com.example.sdk_alert.DonateActivity
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
@@ -13,9 +15,8 @@ class MainActivity : AppCompatActivity() {
 
         val deviceLang: Locale = resources.configuration.locales.get(0)
 
-        DepremAlert.showAlertAction(
-            this,
-            deviceLang.country
-        )
+        startActivity(Intent(this, DonateActivity::class.java))
+
+
     }
 }
