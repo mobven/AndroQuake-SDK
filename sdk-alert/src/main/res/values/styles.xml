@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Alert Dialog -->
+    <style name="alertStyle" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- Background Color-->
+        <item name="android:background">#101010</item>
+        <!-- Text Color for title and message -->
+        <item name="colorOnSurface">@color/color_white</item>
+        <!-- Style for positive button -->
+        <item name="buttonBarPositiveButtonStyle">@style/positiveButtonStyle</item>
+        <!-- Style for negative button -->
+        <item name="buttonBarNegativeButtonStyle">@style/negativeButtonStyle</item>
+    </style>
+
+    <style name="positiveButtonStyle" parent="@style/Widget.MaterialComponents.Button">
+        <!-- text color for the button -->
+        <item name="android:textColor">@color/color_success</item>
+        <!-- Background tint for the button -->
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <style name="negativeButtonStyle" parent="@style/Widget.MaterialComponents.Button">
+        <!-- text color for the button -->
+        <item name="android:textColor">@color/color_success</item>
+        <!-- Background tint for the button -->
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+</resources>
