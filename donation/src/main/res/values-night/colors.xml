@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gunmetal">#FFFFFF</color>
+    <color name="lotion">#1E2025</color>
+    <color name="color_bg_ahbap">#88BE40</color>
+    <color name="color_bg_afad">#0054A6</color>
+    <color name="color_bg_kizilay">#DE2A2C</color>
+    <color name="color_kizilay_text">#FFFFFF</color>
+</resources>
