@@ -38,7 +38,7 @@ Donation.Builder(this).build()
 ### Custom title, message and logo
 If you want to use custom logo, title and description, you can use below builder.
 ```kotlin 
-Donation.Builder(this@MainActivity)
+Donation.Builder(this)
   .logo(R.drawable.my_custom_logo)
   .title("Donate")
   .description("Donation lorem impsum...")
@@ -47,9 +47,9 @@ Donation.Builder(this@MainActivity)
 
 
 ### Spanned title and message, and custom logo
-If you want to show fancy title and description, you can use our *DonationText wrapper to make a spannable string.
+If you want to show fancy title and description, you can use our *DonationText* wrapper to make a spannable string.
 ```kotlin    
-Donation.Builder(this@MainActivity)
+Donation.Builder(this)
   .logo(R.drawable.my_custom_logo)
   .titleSpan(DonationText(SpannableString.valueOf("Donate")))
   .descriptionSpan(DonationText(SpannableString.valueOf("Donation lorem impsum...")))
@@ -57,9 +57,9 @@ Donation.Builder(this@MainActivity)
 ```
 
 ### Custom Action Buttons
-By default it has, AHBAP, AFAD and Turk Kizilayi buttons. If you want to add custom buttons, you can use our *DonateButton to make a your button.
+By default it has, AHBAP, AFAD and Turk Kizilayi buttons. If you want to add custom buttons, you can use our *DonateButton* to make a your button.
 ```kotlin
-Donation.Builder(this@MainActivity)
+Donation.Builder(this)
   .logo(R.drawable.my_custom_logo)
   .titleSpan(DonationText(SpannableString.valueOf("Donate")))
   .descriptionSpan(DonationText(SpannableString.valueOf("Donation lorem impsum...")))

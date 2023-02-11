@@ -14,23 +14,32 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 class Donation(
     @DrawableRes val logo: Int,
-    val title: DonationText?,
-    val description: DonationText?,
+    val title: String?,
+    val description: String?,
+    val titleSpannable: DonationText?,
+    val descriptionSpannable: DonationText?,
     val donationButtonList: List<DonateButton>
 ) : Parcelable {
 
     data class Builder(
         val context: Context,
         private var logo: Int = R.drawable.default_logo,
-        private var title: DonationText? = null,
-        private var description: DonationText? = null,
+        private var title: String? = null,
+        private var description: String? = null,
+        private var titleSpannable: DonationText? = null,
+        private var descriptionSpannable: DonationText? = null,
         private val donationButtonList: MutableList<DonateButton> = mutableListOf()
     ) {
         fun logo(logo: Int) = apply { this.logo = logo }
 
-        fun title(title: DonationText?) = apply { this.title = title }
+        fun title(title: String?) = apply { this.title = title }
 
-        fun description(description: DonationText?) = apply { this.description = description }
+        fun description(description: String?) = apply { this.description = description }
+
+        fun titleSpan(title: DonationText?) = apply { this.titleSpannable = title }
+
+        fun descriptionSpan(description: DonationText?) =
+            apply { this.descriptionSpannable = description }
 
         fun donationButtons(donationButtonList: List<DonateButton>) =
             apply { this.donationButtonList.addAll(donationButtonList) }
@@ -63,15 +72,15 @@ class Donation(
         )
 
         fun build() {
-            if (title == null) {
-                title = DonationText(
+            if (titleSpannable == null) {
+                titleSpannable = DonationText(
                     SpannableString(context.getString(R.string.default_title))
                         .setColor(context.color(R.color.fuzzy_wuzzy), 12, 24)
                         .bold(12, 24)
                 )
             }
-            if (description == null) {
-                description = DonationText(
+            if (descriptionSpannable == null) {
+                descriptionSpannable = DonationText(
                     SpannableString(context.getString(R.string.default_description))
                         .bold(13, 25)
                 )
@@ -82,7 +91,14 @@ class Donation(
             context.startActivity(
                 DonateActivity.callingIntent(
                     context,
-                    Donation(logo, title, description, donationButtonList)
+                    Donation(
+                        logo,
+                        title,
+                        description,
+                        titleSpannable,
+                        descriptionSpannable,
+                        donationButtonList
+                    )
                 )
             )
         }

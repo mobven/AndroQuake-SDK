@@ -31,9 +31,18 @@ class DonateActivity : AppCompatActivity() {
             with(viewBinding) {
 
                 ivLogo.setImageResource(it.logo)
-                tvDonateTitle.text = it.title?.spannableString
-                tvDonateDescription.text = it.description?.spannableString
-
+                it.title?.let {
+                    tvDonateTitle.text = it
+                }
+                it.titleSpannable?.let {
+                    tvDonateTitle.text = it.spannableString
+                }
+                it.description?.let {
+                    tvDonateDescription.text = it
+                }
+                it.descriptionSpannable?.let {
+                    tvDonateDescription.text = it.spannableString
+                }
                 rvDonateButtons.adapter =
                     DonateButtonAdapter(it.donationButtonList) { donateButton ->
                         showUrlOnCustomTabs(
