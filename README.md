@@ -23,8 +23,8 @@ allprojects {
 
 ```
 dependencies {
-	   implementation 'com.github.mobven:androquake:1.0.0'
-	}
+    implementation 'com.github.mobven:AndroQuake-SDK:1.0.1'
+}
 ```
 
 ## Usage
