@@ -1,12 +1,6 @@
 # AndroQuake-SDK
 AndroQuake-SDK to show donation page easily in your app.
 
-## Examples
-<p align="center">
-  <img alt="UI" src="Docs/dark.png">
-  <img alt="UI" src="Docs/light.png">
-</p>
-
 ## Requirements
 * Android Api 21+
 * MaterialComponents Theme
