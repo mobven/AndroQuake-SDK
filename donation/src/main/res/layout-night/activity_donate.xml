@@ -12,11 +12,19 @@
         android:layout_height="wrap_content"
         tools:context="com.mobven.donation.DonateActivity">
 
-        <include
-            android:id="@+id/view_close"
-            layout="@layout/view_close"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_close"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:text="@string/closed"
+            android:textAllCaps="false"
+            android:textColor="@color/color_close_tint"
+            app:icon="@drawable/ic_close_circle"
+            app:iconGravity="textEnd"
+            app:iconTint="@color/color_close_tint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

@@ -21,11 +21,19 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription" />
 
-        <include
-            android:id="@+id/view_close"
-            layout="@layout/view_close"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_close"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:text="@string/closed"
+            android:textAllCaps="false"
+            android:textColor="@color/color_close_tint"
+            app:icon="@drawable/ic_close_circle"
+            app:iconGravity="textEnd"
+            app:iconTint="@color/color_close_tint"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -87,6 +95,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_donate_description"
             tools:itemCount="4"
             tools:listitem="@layout/item_donate_button" />
+
         <ImageView
             android:id="@+id/iv_shape_bottom"
             android:layout_width="wrap_content"
@@ -99,13 +108,13 @@
         <ImageView
             android:id="@+id/iv_shape_heart"
             android:layout_width="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/rv_donate_buttons"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin_12"
             android:layout_marginBottom="@dimen/margin_60"
             android:src="@drawable/bottom_heart"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_donate_buttons"
             tools:ignore="ContentDescription" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

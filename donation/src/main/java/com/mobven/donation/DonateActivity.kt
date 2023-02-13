@@ -4,12 +4,14 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
 import com.mobven.donation.databinding.ActivityDonateBinding
 import com.mobven.donation.helper.MarginItemDecoration
+import com.mobven.extension.click
+import com.mobven.extension.gone
+import com.mobven.extension.show
 import com.mobven.extension.showUrlOnCustomTabs
 
 class DonateActivity : AppCompatActivity() {
@@ -34,12 +36,12 @@ class DonateActivity : AppCompatActivity() {
             with(viewBinding) {
 
                 if (it.closeButtonVisibility == true) {
-                    viewClose.root.visibility = View.VISIBLE
-                    viewClose.clClose.setOnClickListener {
+                    btnClose.show()
+                    btnClose.click {
                         finish()
                     }
                 } else {
-                    viewClose.root.visibility = View.GONE
+                    btnClose.gone()
                 }
 
                 ivLogo.setImageResource(it.logo)
