@@ -2,6 +2,7 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-parcelize'
+    id 'maven-publish'
 }
 
 android {
@@ -31,6 +32,16 @@ android {
     }
     buildFeatures {
         viewBinding true
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.github.mobven'
+            artifactId = 'andonation'
+            version = '1.0.2'
+        }
     }
 }
 
