@@ -90,3 +90,12 @@ Donation.Builder(this)
  )
 ).build()
 ```
+
+### Force Dark-Mode Support
+
+By default this activity supports day/night mode natively. If you want to make to show only dark activity, you can use following method.
+
+```kotlin
+.forceDarkMode(true) // force dark mode configuration
+```
+
