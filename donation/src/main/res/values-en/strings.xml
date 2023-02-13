@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="default_title">Make a Difference with\nEvery Donation</string>
-    <string name="default_description">Our app allows you to make a difference in the lives of those affected by earthquakes that took place on February 6, 2023 and felt its effects in 11 provinces. With just a few taps, you can donate to disaster relief efforts and provide aid to those in need.</string>
+    <string name="make_a_difference">Every Donation</string>
+    <string name="default_description">Our app allows you to make a difference in the lives of those affected by the earthquakes on February 6, 2023. With just a few taps, you can donate to disaster relief efforts and provide aid to those in need.</string>
+    <string name="default_date">February 6, 2023</string>
     <string name="content_description_logo">donate logo</string>
 </resources>

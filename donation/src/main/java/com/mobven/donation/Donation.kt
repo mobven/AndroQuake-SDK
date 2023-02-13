@@ -67,25 +67,25 @@ class Donation(
                 strokeColor = R.color.permanent_geranium_lake,
                 textColor = R.color.color_kizilay_text,
                 backgroundColor = R.color.color_bg_kizilay
-            ),
-            DonateButton(
-                label = "BİREYSEL BAĞIŞ",
-                link = "#bagisyap"
             )
         )
 
         fun build() {
             if (titleSpannable == null) {
+                val startIndex = context.getString(R.string.default_title).indexOf(context.getString(R.string.make_a_difference))
+                val endIndex = startIndex + context.getString(R.string.make_a_difference).length
                 titleSpannable = DonationText(
                     SpannableString(context.getString(R.string.default_title))
-                        .setColor(context.color(R.color.fuzzy_wuzzy), 12, 24)
-                        .bold(12, 24)
+                        .setColor(context.color(R.color.fuzzy_wuzzy), startIndex, endIndex)
+                        .bold(startIndex, endIndex)
                 )
             }
             if (descriptionSpannable == null) {
+                val startIndex = context.getString(R.string.default_description).indexOf(context.getString(R.string.default_date))
+                val endIndex = startIndex + context.getString(R.string.default_date).length
                 descriptionSpannable = DonationText(
                     SpannableString(context.getString(R.string.default_description))
-                        .bold(13, 25)
+                        .bold(startIndex, endIndex)
                 )
             }
             if (donationButtonList.isEmpty()) {
