@@ -18,7 +18,8 @@ class Donation(
     val description: String?,
     val titleSpannable: DonationText?,
     val descriptionSpannable: DonationText?,
-    val donationButtonList: List<DonateButton>
+    val donationButtonList: List<DonateButton>,
+    var forceDarkMode: Boolean?
 ) : Parcelable {
 
     data class Builder(
@@ -28,8 +29,10 @@ class Donation(
         private var description: String? = null,
         private var titleSpannable: DonationText? = null,
         private var descriptionSpannable: DonationText? = null,
-        private val donationButtonList: MutableList<DonateButton> = mutableListOf()
+        private val donationButtonList: MutableList<DonateButton> = mutableListOf(),
+        private var forceDarkMode: Boolean? = null
     ) {
+        fun forceDarkMode(mode: Boolean?) = apply { this.forceDarkMode = mode }
         fun logo(logo: Int) = apply { this.logo = logo }
 
         fun title(title: String?) = apply { this.title = title }
@@ -97,7 +100,8 @@ class Donation(
                         description,
                         titleSpannable,
                         descriptionSpannable,
-                        donationButtonList
+                        donationButtonList,
+                        forceDarkMode
                     )
                 )
             )
