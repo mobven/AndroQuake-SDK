@@ -16,16 +16,24 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="ContentDescription" />
 
+    <include
+        android:id="@+id/view_close"
+        layout="@layout/view_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/iv_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_40"
         android:contentDescription="@string/content_description_logo"
-        tools:src="@drawable/default_logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/default_logo" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_donate_title"
@@ -35,12 +43,12 @@
         android:layout_marginTop="@dimen/margin_36"
         android:layout_marginEnd="@dimen/margin_60"
         android:gravity="center"
-        tools:text="@string/default_title"
-        android:textSize="@dimen/text_title"
         android:textColor="@color/gunmetal"
+        android:textSize="@dimen/text_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+        app:layout_constraintTop_toBottomOf="@id/iv_logo"
+        tools:text="@string/default_title" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_donate_description"
@@ -50,29 +58,29 @@
         android:layout_marginTop="@dimen/margin_24"
         android:layout_marginEnd="@dimen/margin_32"
         android:gravity="center"
+        android:lineHeight="22sp"
         android:textColor="@color/gunmetal"
         android:textSize="13sp"
-        android:lineHeight="22sp"
-        tools:text="@string/default_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_donate_title" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_donate_title"
+        tools:text="@string/default_description" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_donate_buttons"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/margin_22"
-        android:layout_marginEnd="@dimen/margin_22"
         android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="@dimen/margin_22"
         android:paddingBottom="16dp"
-        tools:itemCount="4"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/item_donate_button"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_donate_description" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_donate_description"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_donate_button" />
 
     <ImageView
         android:id="@+id/iv_shape_bottom"

@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
@@ -31,6 +32,15 @@ class DonateActivity : AppCompatActivity() {
     private fun initDonationUi(donation: Donation?) {
         donation?.let {
             with(viewBinding) {
+
+                if (it.closeButtonVisibility == true) {
+                    viewClose.root.visibility = View.VISIBLE
+                    viewClose.clClose.setOnClickListener {
+                        finish()
+                    }
+                } else {
+                    viewClose.root.visibility = View.GONE
+                }
 
                 ivLogo.setImageResource(it.logo)
                 it.title?.let {

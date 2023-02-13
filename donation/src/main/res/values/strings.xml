@@ -4,4 +4,6 @@
     <string name="default_date">6 Şubat 2023</string>
     <string name="default_description">Uygulamamız, 6 Şubat 2023 tarihinde yaşanan depremden etkilenenlerin hayatlarında bir fark yaratmanızı diliyor. Sadece birkaç dokunuşla afet yardımı çabalarına bağışta bulunabilir ve ihtiyacı olanlara yardım sağlayabilirsiniz.</string>
     <string name="content_description_logo">donate logo</string>
+
+    <string name="closed">Kapat</string>
 </resources>

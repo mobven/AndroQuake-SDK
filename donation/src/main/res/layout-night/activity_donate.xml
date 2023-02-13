@@ -7,6 +7,14 @@
     android:layout_height="match_parent"
     tools:context="com.mobven.donation.DonateActivity">
 
+    <include
+        android:id="@+id/view_close"
+        layout="@layout/view_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/iv_logo"
         android:layout_width="wrap_content"

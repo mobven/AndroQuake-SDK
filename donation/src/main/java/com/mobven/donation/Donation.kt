@@ -19,7 +19,8 @@ class Donation(
     val titleSpannable: DonationText?,
     val descriptionSpannable: DonationText?,
     val donationButtonList: List<DonateButton>,
-    var forceDarkMode: Boolean?
+    var forceDarkMode: Boolean?,
+    var closeButtonVisibility: Boolean?
 ) : Parcelable {
 
     data class Builder(
@@ -30,8 +31,11 @@ class Donation(
         private var titleSpannable: DonationText? = null,
         private var descriptionSpannable: DonationText? = null,
         private val donationButtonList: MutableList<DonateButton> = mutableListOf(),
-        private var forceDarkMode: Boolean? = null
+        private var forceDarkMode: Boolean? = null,
+        private var closeButtonVisibility: Boolean? = null
     ) {
+        fun addCloseButton(visibility: Boolean?) = apply { this.closeButtonVisibility = visibility }
+
         fun forceDarkMode(mode: Boolean?) = apply { this.forceDarkMode = mode }
         fun logo(logo: Int) = apply { this.logo = logo }
 
@@ -101,7 +105,8 @@ class Donation(
                         titleSpannable,
                         descriptionSpannable,
                         donationButtonList,
-                        forceDarkMode
+                        forceDarkMode,
+                        closeButtonVisibility
                     )
                 )
             )
