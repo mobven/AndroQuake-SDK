@@ -2,11 +2,9 @@ package com.mobven.donation
 
 import android.content.Context
 import android.content.Intent
-import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
 import com.mobven.donation.databinding.ActivityDonateBinding
@@ -39,10 +37,10 @@ class DonateActivity : AppCompatActivity() {
                     tvDonateTitle.text = it
                 }
 
-                it.setDarkMode?.let { mode ->
-                    if(mode){
+                it.forceDarkMode?.let { mode ->
+                    if (mode) {
                         delegate.localNightMode = MODE_NIGHT_YES;
-                    }else{
+                    } else {
                         delegate.localNightMode = MODE_NIGHT_NO;
                     }
                 }
@@ -74,6 +72,7 @@ class DonateActivity : AppCompatActivity() {
             }
         }
     }
+
     companion object {
 
         private const val EXTRA_DONATION = "donation"
