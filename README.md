@@ -1,5 +1,6 @@
 # AndroQuake-SDK
 [![](https://jitpack.io/v/mobven/AndroQuake-SDK.svg)](https://jitpack.io/#mobven/AndroQuake-SDK)
+
 AndroQuake-SDK to show donation page easily in your app.
 
 ## Examples
