@@ -8,6 +8,8 @@
     <dimen name="margin_40">40dp</dimen>
     <dimen name="margin_60">60dp</dimen>
 
+    <dimen name="padding_16">16dp</dimen>
+
     <dimen name="radius_8">8dp</dimen>
 
     <dimen name="text_title">24sp</dimen>
