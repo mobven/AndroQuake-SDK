@@ -61,6 +61,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_donate_title"
             tools:text="@string/default_description" />
+
         <LinearLayout
             android:id="@+id/ll_recycler_view_wrapper"
             android:layout_width="match_parent"
