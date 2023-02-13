@@ -56,6 +56,7 @@ class MainActivity : AppCompatActivity() {
                         )
                     )
                     .forceDarkMode(true)
+                    .addCloseButton(true)
                     .build()
             }
 

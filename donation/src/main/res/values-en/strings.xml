@@ -5,4 +5,6 @@
     <string name="default_description">Our app allows you to make a difference in the lives of those affected by the earthquakes on February 6, 2023. With just a few taps, you can donate to disaster relief efforts and provide aid to those in need.</string>
     <string name="default_date">February 6, 2023</string>
     <string name="content_description_logo">donate logo</string>
+
+    <string name="closed">Closed</string>
 </resources>

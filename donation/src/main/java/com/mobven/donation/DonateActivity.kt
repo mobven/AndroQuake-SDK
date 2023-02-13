@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
 import com.mobven.donation.databinding.ActivityDonateBinding
 import com.mobven.donation.helper.MarginItemDecoration
+import com.mobven.extension.click
+import com.mobven.extension.gone
+import com.mobven.extension.show
 import com.mobven.extension.showUrlOnCustomTabs
 
 class DonateActivity : AppCompatActivity() {
@@ -31,6 +34,15 @@ class DonateActivity : AppCompatActivity() {
     private fun initDonationUi(donation: Donation?) {
         donation?.let {
             with(viewBinding) {
+
+                if (it.closeButtonVisibility == true) {
+                    btnClose.show()
+                    btnClose.click {
+                        finish()
+                    }
+                } else {
+                    btnClose.gone()
+                }
 
                 ivLogo.setImageResource(it.logo)
                 it.title?.let {

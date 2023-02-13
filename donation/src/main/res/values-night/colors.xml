@@ -6,4 +6,6 @@
     <color name="color_bg_afad">#0054A6</color>
     <color name="color_bg_kizilay">#DE2A2C</color>
     <color name="color_kizilay_text">#FFFFFF</color>
+
+    <color name="color_close_tint">#FFFFFF</color>
 </resources>
