@@ -62,29 +62,21 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_donate_title"
             tools:text="@string/default_description" />
 
-        <LinearLayout
-            android:id="@+id/ll_recycler_view_wrapper"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_donate_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginStart="@dimen/margin_22"
             android:layout_marginTop="@dimen/margin_32"
             android:layout_marginEnd="@dimen/margin_22"
-            app:layout_constraintBottom_toTopOf="@+id/iv_shape_heart"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/padding_16"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_donate_description">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_donate_buttons"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="@dimen/padding_16"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                android:overScrollMode="never"
-                tools:itemCount="4"
-                tools:listitem="@layout/item_donate_button" />
-        </LinearLayout>
+            app:layout_constraintTop_toBottomOf="@+id/tv_donate_description"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_donate_button" />
 
         <ImageView
             android:id="@+id/iv_shape_heart"
@@ -95,6 +87,7 @@
             android:src="@drawable/bottom_heart"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_donate_buttons"
             tools:ignore="ContentDescription" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
